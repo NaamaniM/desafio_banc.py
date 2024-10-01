@@ -1,0 +1,58 @@
+import textwrap
+
+Menu = ("""
+    ########## Seja Bem Vindo(a) ##########    
+               Menu                
+    [1] Depositar
+    [2] Sacar
+    [3] Extrato
+    [4] Listar contas
+    [5] Nova conta
+    [6] Novo usuário
+    [7] Sair
+""")
+
+saldo = 0
+limite = 500
+extrato = ""
+numero_saques = 0
+LIMITE_SAQUES = 3
+usuarios = []
+contas = []
+AGENCIA = "0001"
+
+def novo_usuario(usuarios):
+    # Lógica para criar um novo usuário
+
+def filtrar_usuario(cpf, usuarios):
+    # Lógica para filtrar um usuário
+
+def criar_conta(agencia, numero_conta, usuarios):
+    # Lógica para criar uma nova conta
+
+def listar_contas(contas):
+    # Lógica para listar contas
+
+while True:
+    opcao = input(Menu)
+
+    if opcao == "1":
+        # Código para depósito
+    elif opcao == "2":
+        # Código para saque
+    elif opcao == "3":
+        # Código para extrato
+    elif opcao == "4":
+        listar_contas(contas)
+    elif opcao == "5":
+        numero_conta = len(contas) + 1
+        conta = criar_conta(AGENCIA, numero_conta, usuarios)
+        if conta:
+            contas.append(conta)
+    elif opcao == "6":
+        novo_usuario(usuarios)
+    elif opcao == "7":
+        print("\n      ########## Volte Sempre ########## \n")
+        break
+    else:
+        print("Operação inválida, por favor selecione novamente a operação desejada.")
